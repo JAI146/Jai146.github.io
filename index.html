@@ -4,41 +4,115 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Jai Suryawanshi — Portfolio</title>
-  <style>
-    body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial;max-width:900px;margin:40px auto;padding:0 20px;color:#111}
-    header{display:flex;gap:16px;align-items:center}
-    img.avatar{width:84px;height:84px;border-radius:12px;object-fit:cover}
-    h1{margin:0}
-    .links a{margin-right:12px}
-    .card{border-radius:10px;padding:16px;margin-top:18px;background:#f7f7f7}
-  </style>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Jai Suryawanshi — Webmaster, software & systems enthusiast. Resume, projects, contact." />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
 </head>
 <body>
-  <header>
-    <img class="avatar" src="https://via.placeholder.com/150" alt="Your photo">
-    <div>
+  <div class="page">
+    <aside class="sidebar">
+      <img class="avatar" src="https://via.placeholder.com/300" alt="Jai Suryawanshi">
       <h1>Jai Suryawanshi</h1>
-      <p>Short tagline — e.g., "Student • Developer • Maker"</p>
-      <div class="links">
-        <a href="https://github.com/USERNAME">GitHub</a>
-        <a href="https://linkedin.com/in/USERNAME">LinkedIn</a>
-        <a href="/resume.pdf">Resume</a>
+      <p class="title">Webmaster — University of Oklahoma IEEE Student Chapter</p>
+
+      <div class="quick">
+        <a class="btn" href="/resume.pdf" target="_blank" rel="noopener">Download Resume</a>
+        <a class="btn ghost" href="mailto:your.email@example.com">Email</a>
       </div>
-    </div>
-  </header>
 
-  <section class="card">
-    <h2>About</h2>
-    <p>Write one short paragraph about yourself — what you study, what you build, or what you want to do.</p>
-  </section>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-  <section class="card">
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>Project A</strong> — short description. <a href="#">Demo</a> • <a href="#">Code</a></li>
-    </ul>
-  </section>
+      <div class="foot">
+        <small>© <span id="year"></span> Jai Suryawanshi</small>
+        <small><a href="https://github.com/jai146" target="_blank" rel="noopener">github/jai146</a></small>
+      </div>
+    </aside>
 
-  <footer style="margin-top:28px;font-size:90%">&copy; <script>document.write(new Date().getFullYear())</script> Your Name — Built with GitHub Pages</footer>
+    <main class="content">
+      <section id="about" class="card hero">
+        <h2>About</h2>
+        <p><strong>Who I am:</strong> I build reliable websites, web tooling, and small web apps. I’m currently the Webmaster for the University of Oklahoma IEEE Student Chapter — I maintain the chapter site, handle deployments, and help with events & digital presence.</p>
+        <p><strong>Resume summary:</strong> Paste a 2–3 line professional summary from your resume here. Example: "Full-stack enthusiast with experience in HTML/CSS/JavaScript, Git, and web hosting. Passionate about open source and student leadership."</p>
+      </section>
+
+      <section id="experience" class="card">
+        <h2>Experience</h2>
+        <div class="timeline">
+          <article>
+            <h3>Webmaster — University of Oklahoma IEEE Student Chapter</h3>
+            <p class="muted">Dates — Location</p>
+            <ul>
+              <li>Maintained chapter website, handled GitHub Pages deployments and site updates.</li>
+              <li>Built event pages and integrated registration forms.</li>
+              <li>Worked with officers to maintain content and accessibility.</li>
+            </ul>
+          </article>
+
+          <article>
+            <h3>Role / Company — Example</h3>
+            <p class="muted">Dates — Location</p>
+            <ul>
+              <li>Paste resume bullets here (project highlights, achievements, tech used).</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects" class="card">
+        <h2>Projects</h2>
+        <div class="grid">
+          <article class="project">
+            <h4>Project One</h4>
+            <p>Short 1–2 line description. Add links to code/demo.</p>
+            <div class="meta"><a href="#">Code</a> • <a href="#">Demo</a></div>
+          </article>
+
+          <article class="project">
+            <h4>Project Two</h4>
+            <p>Short description. Use real repo links from your GitHub.</p>
+            <div class="meta"><a href="#">Code</a> • <a href="#">Demo</a></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills" class="card">
+        <h2>Skills</h2>
+        <div class="chips">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Git</span><span>GitHub Pages</span>
+          <span>HTTP</span><span>Responsive Design</span><span>Accessibility</span>
+        </div>
+      </section>
+
+      <section id="contact" class="card">
+        <h2>Contact</h2>
+        <p>If you want me to link your LinkedIn, email, or other profiles, add them below.</p>
+
+        <form id="contactForm" action="mailto:your.email@example.com" method="post" enctype="text/plain">
+          <label>Name <input name="name" required></label>
+          <label>Email <input name="email" type="email" required></label>
+          <label>Message <textarea name="message" rows="4" required></textarea></label>
+          <div class="form-row">
+            <button type="submit" class="btn">Send (opens email)</button>
+            <button type="reset" class="btn ghost">Reset</button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Small enhancement: smooth scroll for nav links
+    document.querySelectorAll('.nav a').forEach(a=>a.addEventListener('click', e=>{
+      e.preventDefault();
+      document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+    }));
+  </script>
 </body>
 </html>
