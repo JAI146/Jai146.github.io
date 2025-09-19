@@ -4,115 +4,129 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Jai Suryawanshi — Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
-  <meta name="description" content="Jai Suryawanshi — Webmaster, software & systems enthusiast. Resume, projects, contact." />
-  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+  <style>
+    :root{
+      --accent:#0f62fe;
+      --bg:#f7f9fc;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --radius:14px;
+      --max:1100px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:#0b1220;display:flex;justify-content:center;padding:20px}
+    .page{max-width:var(--max);width:100%;display:flex;flex-direction:column;gap:20px}
+    header{background:var(--card);padding:24px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(0,0,0,0.06);text-align:center}
+    header h1{margin:0;font-size:28px}
+    header p{margin:6px 0;color:var(--muted)}
+    header a{margin:0 10px;text-decoration:none;color:var(--accent)}
+    section{background:var(--card);padding:20px;border-radius:var(--radius);box-shadow:0 4px 12px rgba(0,0,0,0.04)}
+    h2{margin-top:0;color:var(--accent)}
+    ul{margin:0;padding-left:18px}
+    li{margin-bottom:6px}
+    .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .chips span{background:#eef3ff;padding:6px 12px;border-radius:999px;font-size:13px}
+    .timeline article{margin-bottom:16px}
+    .muted{font-size:14px;color:var(--muted)}
+    footer{text-align:center;color:var(--muted);margin-top:20px}
+    @media (max-width:700px){
+      header h1{font-size:22px}
+    }
+  </style>
 </head>
 <body>
   <div class="page">
-    <aside class="sidebar">
-      <img class="avatar" src="https://via.placeholder.com/300" alt="Jai Suryawanshi">
+    <header>
       <h1>Jai Suryawanshi</h1>
-      <p class="title">Webmaster — University of Oklahoma IEEE Student Chapter</p>
+      <p>Norman, Oklahoma • (405)-361-1285 • <a href="mailto:jaisuryawanshi150@gmail.com">jaisuryawanshi150@gmail.com</a></p>
+      <p><a href="https://www.linkedin.com/in/jaisuryawanshi150" target="_blank">LinkedIn</a> • 
+         <a href="https://github.com/jai146" target="_blank">GitHub</a></p>
+    </header>
 
-      <div class="quick">
-        <a class="btn" href="/resume.pdf" target="_blank" rel="noopener">Download Resume</a>
-        <a class="btn ghost" href="mailto:your.email@example.com">Email</a>
+    <section id="summary">
+      <h2>Summary</h2>
+      <p>Data Engineer experienced in building scalable data ecosystems, ETL/ELT pipelines, and BI platforms. 
+         Proficient in SQL, Python, Airflow, Microsoft Fabric, and cloud (AWS, Azure, GCP). 
+         Background in ML, data mining, and predictive modeling to deliver actionable insights.</p>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>University of Oklahoma</strong>, Norman, OK — MS in Computer Science, GPA: 4.0 (Dec 2026)</li>
+        <li><strong>Pune University</strong>, Pune, India — B.Tech. in Computer Engineering, GPA: 3.7 (May 2023)</li>
+      </ul>
+    </section>
+
+    <section id="skills">
+      <h2>Technical Skills</h2>
+      <div class="chips">
+        <span>Python</span><span>SQL</span><span>R</span><span>SAS</span><span>C++</span><span>Java</span>
+        <span>JavaScript/TypeScript</span><span>React.js</span><span>Node.js</span>
+        <span>Azure</span><span>AWS</span><span>GCP</span><span>Airflow</span><span>Microsoft Fabric</span>
+        <span>Snowflake</span><span>Kafka</span><span>Hadoop</span><span>Docker</span><span>Kubernetes</span>
+        <span>Power BI</span><span>Tableau</span><span>TensorFlow</span><span>Pandas</span><span>NumPy</span>
       </div>
+    </section>
 
-      <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </nav>
-
-      <div class="foot">
-        <small>© <span id="year"></span> Jai Suryawanshi</small>
-        <small><a href="https://github.com/jai146" target="_blank" rel="noopener">github/jai146</a></small>
+    <section id="experience">
+      <h2>Work Experience</h2>
+      <div class="timeline">
+        <article>
+          <h3>Data Engineer — ITC Infotech Inc</h3>
+          <p class="muted">Nov 2023 – Dec 2024</p>
+          <ul>
+            <li>Migrated platform from Snowflake to Microsoft Fabric, boosting query speed 25%.</li>
+            <li>Built 20+ ETL pipelines (Python, SQL, Airflow, Azure Data Factory) with monitoring and data quality checks.</li>
+            <li>Created self-healing ETL framework, resolving 80% failures automatically.</li>
+            <li>Delivered Power BI dashboards with anomaly detection, cutting reporting lag 40%.</li>
+          </ul>
+        </article>
+        <article>
+          <h3>Data Engineer Intern — Hybrique</h3>
+          <p class="muted">Sep 2022 – Aug 2023</p>
+          <ul>
+            <li>Built CAD pipelines (PyQt, SQL, AWS Lambda, DynamoDB, S3) for 500+ engineers.</li>
+            <li>Redesigned plugin UI, improving adoption 30%.</li>
+            <li>Integrated AI-based circuit recognition, improving accuracy 25%.</li>
+          </ul>
+        </article>
+        <article>
+          <h3>Data Engineering Intern — Cyber Secured India</h3>
+          <p class="muted">Jan 2022 – Aug 2022</p>
+          <ul>
+            <li>Developed pipelines aggregating vulnerability data into PostgreSQL.</li>
+            <li>Created Tableau security dashboards with SLA metrics and severity scores.</li>
+            <li>Implemented anomaly detection, reducing remediation delays 25%.</li>
+          </ul>
+        </article>
       </div>
-    </aside>
+    </section>
 
-    <main class="content">
-      <section id="about" class="card hero">
-        <h2>About</h2>
-        <p><strong>Who I am:</strong> I build reliable websites, web tooling, and small web apps. I’m currently the Webmaster for the University of Oklahoma IEEE Student Chapter — I maintain the chapter site, handle deployments, and help with events & digital presence.</p>
-        <p><strong>Resume summary:</strong> Paste a 2–3 line professional summary from your resume here. Example: "Full-stack enthusiast with experience in HTML/CSS/JavaScript, Git, and web hosting. Passionate about open source and student leadership."</p>
-      </section>
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>Customer Segmentation for E-Commerce</strong> — Full-stack platform (React.js, .NET, Python) with RFM, K-Means, and recommendation systems. Published in IEEE Xplore.</li>
+        <li><strong>Real-Time Streaming Data Pipeline</strong> — Kafka, Spark, Delta Lake, Azure, processing 1000+ IoT events/hour with 95% accurate anomaly detection.</li>
+      </ul>
+    </section>
 
-      <section id="experience" class="card">
-        <h2>Experience</h2>
-        <div class="timeline">
-          <article>
-            <h3>Webmaster — University of Oklahoma IEEE Student Chapter</h3>
-            <p class="muted">Dates — Location</p>
-            <ul>
-              <li>Maintained chapter website, handled GitHub Pages deployments and site updates.</li>
-              <li>Built event pages and integrated registration forms.</li>
-              <li>Worked with officers to maintain content and accessibility.</li>
-            </ul>
-          </article>
+    <section id="activities">
+      <h2>Activities & Achievements</h2>
+      <ul>
+        <li>Organizer and Guest Escort at KPIT Sparkal — managed 1000+ guests.</li>
+        <li>State and National Basketball Champion — represented at competitive levels.</li>
+        <li>HR Department, University of Oklahoma — assisted with recruitment and engagement.</li>
+      </ul>
+    </section>
 
-          <article>
-            <h3>Role / Company — Example</h3>
-            <p class="muted">Dates — Location</p>
-            <ul>
-              <li>Paste resume bullets here (project highlights, achievements, tech used).</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section id="projects" class="card">
-        <h2>Projects</h2>
-        <div class="grid">
-          <article class="project">
-            <h4>Project One</h4>
-            <p>Short 1–2 line description. Add links to code/demo.</p>
-            <div class="meta"><a href="#">Code</a> • <a href="#">Demo</a></div>
-          </article>
-
-          <article class="project">
-            <h4>Project Two</h4>
-            <p>Short description. Use real repo links from your GitHub.</p>
-            <div class="meta"><a href="#">Code</a> • <a href="#">Demo</a></div>
-          </article>
-        </div>
-      </section>
-
-      <section id="skills" class="card">
-        <h2>Skills</h2>
-        <div class="chips">
-          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Git</span><span>GitHub Pages</span>
-          <span>HTTP</span><span>Responsive Design</span><span>Accessibility</span>
-        </div>
-      </section>
-
-      <section id="contact" class="card">
-        <h2>Contact</h2>
-        <p>If you want me to link your LinkedIn, email, or other profiles, add them below.</p>
-
-        <form id="contactForm" action="mailto:your.email@example.com" method="post" enctype="text/plain">
-          <label>Name <input name="name" required></label>
-          <label>Email <input name="email" type="email" required></label>
-          <label>Message <textarea name="message" rows="4" required></textarea></label>
-          <div class="form-row">
-            <button type="submit" class="btn">Send (opens email)</button>
-            <button type="reset" class="btn ghost">Reset</button>
-          </div>
-        </form>
-      </section>
-    </main>
+    <footer>
+      <p>&copy; <span id="year"></span> Jai Suryawanshi — Built with GitHub Pages</p>
+    </footer>
   </div>
-
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-    // Small enhancement: smooth scroll for nav links
-    document.querySelectorAll('.nav a').forEach(a=>a.addEventListener('click', e=>{
-      e.preventDefault();
-      document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'});
-    }));
   </script>
 </body>
 </html>
